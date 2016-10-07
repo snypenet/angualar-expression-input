@@ -1,0 +1,8 @@
+
+<input type="text" class="expression" ng-model="expression" ng-change="evaluate()" ng-click="getCursorPosition($event)" ng-keyup="getCursorPosition($event)" />
+<div class="expression-variables" ng-show="variables && variables.length">
+	<br/>
+    <button ng-repeat="variable in variables" type="button" class="button button-outline button-stable" ng-click="insertVariable(variable.name)">{{variable.name}}</button>
+</div>
+<br/>
+<span ng-show="shouldShowValue()" class="expression-result">{{value}}</span>
